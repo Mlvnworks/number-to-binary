@@ -1,0 +1,100 @@
+/* header */
+#wraper {
+    background-color: rgb(69, 66, 66);
+}
+#header-container {
+    background-image: linear-gradient(to right, red, blue);
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+h1 {
+    background: -webkit-linear-gradient(45deg, rgb(247, 3, 247), rgb(27, 150, 238));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* color: white; */
+}
+
+/* text area */
+#textarea-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    padding: 2rem;
+    box-sizing: border-box;
+    font-size: 2em;
+    resize: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.376);
+    color: lightgray;
+}
+textarea:focus {
+    outline: 5px solid rgba(56, 131, 222, 0.275);
+}
+
+#num-input {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 3px solid rgba(128, 128, 128, 0.227);
+}
+#bin-output {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* average laptop size */
+@media only screen and (max-width: 1024px) {
+    textarea {
+        width: 90%;
+        max-height: 400px;
+    }
+}
+
+/* Tablet size */
+@media only screen and (max-width: 768px) {
+    textarea {
+        width: 90%;
+        max-height: 350px;
+    }
+}
+
+/* large mobile size */
+@media only screen and (max-width: 450px) {
+    #textarea-container {
+        display: block;
+    }
+
+    textarea {
+        width: 380px;
+        margin: 0 auto;
+        height: 250px;
+        border-radius: 10px;
+    }
+}
+
+/* average mobile size */
+@media only screen and (max-width: 375px) {
+    textarea {
+        width: 325px;
+        margin: 0 0;
+        padding: 0.5rem;
+    }
+}
+
+/* sm mobile size */
+@media only screen and (max-width: 320px) {
+    #textarea-container {
+        width: 98%;
+    }
+    textarea {
+        width: 280px;
+        margin: 0 0;
+    }
+}

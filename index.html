@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style/style.css" />
+        <title>2Binary Converter</title>
+    </head>
+    <body class="bg-secondary">
+        <section class="p-3">
+            <div class="container">
+                <div id="header-container">
+                    <div class="text-center py-3 text-light rounded w-100" id="wraper">
+                        <h1 class="">Convert Numbers Into Binary code</h1>
+                    </div>
+                </div>
+                <div class="mt-5 text-center" id="textarea-container">
+                    <div class="col-6 text-end">
+                        <textarea cols="30" rows="10" id="num-input" placeholder="Enter number...">
+                        </textarea>
+                    </div>
+                    <div class="col-6 text-start">
+                        <textarea
+                            cols="30"
+                            rows="10"
+                            id="bin-output"
+                            placeholder="Convert.."
+                            readonly
+                        >
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- JavaScript Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
