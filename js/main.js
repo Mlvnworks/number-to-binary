@@ -60,31 +60,23 @@ function binary(x) {
 }
 
 // check if the input only a number, if not it will automaticaly remove
-function numOnly(char) {
-    const isValid = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+async function numOnly(x) {
+    const z = /[a-z]/gi;
+    let convert = await x
+        .split('')
+        .filter(y => z.test(y) === false)
+        .join('');
 
-    if ((char >= 48 && char <= 57) || char === 8) {
-        const input = numInput.value
-            .split('')
-            .filter(x => isValid.includes(x))
-            .join('');
+    numInput.value = convert;
 
-        if (input === '') {
-            binOutput.value = '';
-        } else {
-            binOutput.value = binary(parseInt(input));
-        }
+    if (numInput.value) {
+        const parsed = parseInt(convert);
+        binOutput.value = binary(parsed);
     } else {
-        const poped = numInput.value;
-
-        numInput.value = poped
-            .split('')
-            .filter(x => x !== ' ')
-            .pop();
+        binOutput.value = '';
     }
 }
-
 // run numOnly
 numInput.addEventListener('keyup', e => {
-    numOnly(e.which);
+    numOnly(e.target.value);
 });
